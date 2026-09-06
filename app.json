@@ -8,14 +8,14 @@
     "scheme": "koda",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/icon.png"
     },
     "android": {
+      "package": "com.gln.koda",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#14212D",
+        "foregroundImage": "./assets/images/icon.png",
+        "monochromeImage": "./assets/images/icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
@@ -28,15 +28,34 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "backgroundColor": "#14212D",
+          "image": "./assets/images/icon.png",
+          "imageWidth": 120
         }
-      ]
+      ],
+      "expo-font",
+      [
+        "expo-navigation-bar",
+        {
+          "hidden": true,
+          "style": "dark"
+        }
+      ],
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "expo-navigation-bar": {
+        "style": "dark",
+        "hidden": true
+      },
+      "eas": {
+        "projectId": "3ad5d1b4-7edf-4c20-9d47-b0b2ae9b2271"
+      }
     }
   }
 }
