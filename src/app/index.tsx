@@ -84,7 +84,7 @@ export default function Dashboard() {
           {loading ? <Text style={styles.live}>LOADING</Text> : <Text style={styles.live}>LIVE</Text>}
         </Animated.View>
         <View style={styles.statsRow}>
-          {[['Active', active, 'briefcase-outline'], ['Interviews', interviews, 'people-outline'], ['Open tasks', dueTasks, 'checkmark-circle-outline']].map(([label, value, icon], i) => (
+          {[['Active applications', active, 'briefcase-outline'], ['Interviews', interviews, 'people-outline'], ['Open tasks', dueTasks, 'checkmark-circle-outline']].map(([label, value, icon], i) => (
             <Animated.View key={String(label)} entering={FadeInDown.delay(180 + i * 80).duration(260)} style={styles.statCard}>
               <View style={styles.statIcon}><Ionicons name={icon as any} size={16} color={i === 1 ? Palette.clay : Palette.brassDeep} /></View>
               <Count value={Number(value)} />
